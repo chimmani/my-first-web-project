@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms in HTML</title>
+</head>
+<body>
+    <form autocomplete="off">
+        <fieldset>
+            <legend><h1>Registration form</h1></legend>
+            <label>First Name</label>
+            <input type="text" name="fname" placeholder="first name" required/><br><br>
+            <label>Last Name</label>
+            <input type="text" name="lname" placeholder="Last name"/><br><br>
+            <label>Mobile num</label>
+            <input type="text" name="Mnum" placeholder="Mobile"/><br><br>
+            <label>Address</label>
+            <textarea name="message" rows="10" cols="30"></textarea><br><br>
+            <label>Password</label>
+            <input type="password" name="pwd"/><br><br>
+            <labell>DOB</labell>
+            <select name="day">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            <select name="Month">
+                <option value="1">January</option>
+                <option value="2">February</option>
+                <option value="3">March</option>
+                <option value="4">Arpril</option>
+                <option value="5">May</option>
+            </select>
+            <select name="Year">
+                <option value="94">1994</option>
+                <option value="95">1995</option>
+                <option value="96">1996</option>
+            </select><br><br>
+            <label>Gender</label>
+            <input type="radio" name="gender" value="female"/>female
+            <input type="radio" name="gender" value="male"/>male<br><br>
+            <label>Course</label>
+            <input type="checkbox" name="Course" value="HTML"/>HTML
+            <input type="checkbox" name="Course" value="CSS"/>CSS
+            <input type="checkbox" name="Course" value="Javascript"/>Javascript<br><br>
+            <label>Programming language</label>
+            <select name="Programming language">
+                <optgroup label="Programming language">
+                    <option value="C">C</option>
+                    <option valu="C++">C++</option>
+                </optgroup>   
+                <optgroup label="Scripting Language">
+                    <option value="PHP">PHP</option>
+                    <option value="Shell">Shell</option>
+                </optgroup>
+            </select><br><br>
+            <input type="submit" value="submit"/>
+            <input type="Reset" value="Reset"/>  
+
+        </fieldset>
+    </form>
+</body>
+</html>

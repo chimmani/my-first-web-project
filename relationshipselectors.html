@@ -1,0 +1,107 @@
+<html>
+    <head>
+        <title>Selection in CSS</title>
+        <style>/*Direct children selctors(child combinator)*/
+            ul>li{
+                color: seagreen;
+            }
+            .container > .A{
+                color: blue;
+                font-size: 40px;
+            }
+            .container > #C{
+                color: blue;
+            }
+            div p{/*Descendant Selector*/
+                background-color: cadetblue;
+            }
+            /* pseudo-selectors*/
+            ul li:first-child, ol li:last-child{
+                border: 1px solid red;
+            }
+            ul li:nth-child(2n){
+                color: cornflowerblue;
+            }
+            ul li:nth-child(2n+1){
+                background-color: rgb(235, 171, 235);
+            }
+            ul li:nth-child(7){
+                font-size: 60px;
+            }
+            ul + p{/*Adjacent sibling*/
+                font-size:xx-small;
+            }
+            div ~ p{/*general sibling sector*/
+                color: rgb(255, 136, 0);
+            }   
+            p::first-letter{
+                background-color: aqua;
+            } 
+            p::first-line{
+                font-size: 30px;
+            }
+            p::first-line{
+                background-color: orange;
+            }
+            p::before{
+                content:"####"
+            }
+        </style>
+    </head>
+    <body>
+        <ol>
+            <li>HTML
+                <ul>
+                    <li>HTML stands for Hyper Text Markup Language</li>
+                    <li>HTML is the standard markup language for creating Web pages</li>
+                    <li>HTML describes the structure of a Web page</li>
+                    <li>HTML consists of a series of elements</li>
+                    <li> HTML elements tell the browser how to display the content</li>
+                    <li>HTML elements label pieces of content such as "this is a heading", "this is a paragraph", "this is a link", etc. </li>
+                </ul>
+            </li>
+            <li>CSS
+                <ul>
+                    <li>CSS stands for Cascading Style Sheets.</li>
+                    <li>CSS saves a lot of work. It can control the layout of multiple web pages all at once.</li>
+                    <li>With CSS, you can control the color, font, the size of text, the spacing between elements, how elements are positioned and laid out, what background images or background colors are to be used, different displays for different devices and screen sizes, and much more!</li>
+                </ul>
+            </li>
+            <li>An inline CSS is used to apply a unique style to a single HTML element.</li>
+            <li>An inline CSS uses the style attribute of an HTML element.</li>
+        </ol>
+        <section class="container">
+            <div class="A">HTML</div>
+            <div class="B">CSS</div>
+            <div id="C">JAVASCRIPT</div>
+            <div class="D">BOOTSTRAP</div>
+            <section>
+            <div>
+                <p>HTML stands for Hyper Text Markup Language</p>
+                <p>HTML is the standard markup language for creating Web pages</p>
+            </div>
+
+        </section>
+        <ul>
+            <li>CSS stands for Cascading Style Sheets.</li>
+            <li>CSS saves a lot of work. It can control the layout of multiple web pages all at once.</li>
+            <li>With CSS, you can control the color, font, the size of text, the spacing between elements, how elements are positioned and laid out, what background images or background colors are to be used, different displays for different devices and screen sizes, and much more!</li>
+            <li>CSS stands for Cascading Style Sheets.</li>
+            <li>CSS stands for Cascading Style Sheets.</li>
+            <li>CSS stands for Cascading Style Sheets.</li>
+            <li>CSS stands for Cascading Style Sheets.</li>
+        </ul>
+        <p>CSS saves a lot of work. It can control the layout of multiple web pages all at once.</p>
+        <p>With CSS, you can control the color, font, the size of text, the spacing between elements</p>
+        <p>elements are positioned and laid out, what background images or background colors are to be used</p>
+
+        <div id="box">
+        <p>CSS saves a lot of work. It can control the layout of multiple web pages all at once.</p>
+        </div>
+        <p>With CSS, you can control the color, font, the size of text, the spacing between elements</p>
+        <p>elements are positioned and laid out, what background images or background colors are to be used</p>
+
+
+        
+    </body>
+</html>

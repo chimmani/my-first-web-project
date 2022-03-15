@@ -1,0 +1,159 @@
+HTML FORM:HTML form is used to collect user input. It is most often sent ot a server for processing.
+
+forms Attributes:
+
+      Attribute	                           Description
+accept-charset	                     Specifies the character encodings used for form submission
+enctype	                             Specifies how the form-data should be encoded when submitting it to the server (only for method="post")
+name	                               Specifies the name of the form
+rel	                                 Specifies the relationship between a linked resource and the current document
+
+Action                               The action attribute defines the action to be performed when the form is submitted
+
+Target:  attribute specifies where to display the response that is received after submitting the form
+  Value	           Description
+_self	          The response is displayed in the current window
+_blank	          The response is displayed in a new window or tab
+_parent	          The response is displayed in the parent frame
+_top	          The response is displayed in the full body of the window
+framename	      The response is displayed in a named iframe
+
+Method: Attribute specifies the HTTP method to be used when submitting the form data.
+The form-data can be sent as URL variables (with method="get") or as HTTP post transaction (with method="post")
+
+Autocomplete: attribute specifies whether a form should have autocomplete on or off
+When autocomplete is on, the browser automatically complete values based on values that the user has entered before
+
+Novalidate Attribute: attribute is a boolean attribute. When present, it specifies that the form-data (input) should not be validated when submitted.
+
+HTML FORM ELEMENTS: 
+<input>: An <input> element can be displayed in many ways, depending on the TYPE attribute.
+
+
+ Type	                                          Description
+<input type="text">              	  Displays a single-line text input field
+<input type="radio">	              Displays a radio button (for selecting one of many choices)
+<input type="checkbox">	            Displays a checkbox (for selecting zero or more of many choices)
+<input type="submit">	              Displays a submit button (for submitting the form)
+<input type="button">	              Displays a clickable button
+<input type="color">                it used for input fields that should contain a color.Depending on browser support, a color picker can show up in the input field.
+<input type="date">                 it used for input fields that should contain a date.Depending on browser support, a date picker can show up in the input field.
+<input type="datetime-local">       specifies a date and time input field, with no time zone.
+<input type="email">                it used for input fields that should contain an e-mail address.
+<input type="file">                 defines a file-select field and a "Browse" button for file uploads.
+<input type="hidden">                a hidden input field (not visible to a user).
+----->Example:<input type="hidden" id="custId" name="custId" value="3487">
+<input type="image">
+<input type="month">                allows the user to select a month and year.Depending on browser support, a date picker can show up in the input field.
+<input type="number">               defines a numeric input field.
+<input type="password">             defines a password field
+<input type="range">                defines a control for entering a number whose exact value is not important (like a slider control). Default range is 0 to 100.
+<input type="reset">                defines a reset button that will reset all form values to their default values
+<input type="search">               it used for search fields (a search field behaves like a regular text field).
+<input type="tel">                  it used for input fields that should contain a telephone number.
+---->Example: <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+<input type="time">                 it allows the user to select a time (no time zone).
+<input type="url">                  it used for input fields that should contain a URL address.
+<input type="week">                 it allows the user to select a week and year.
+
+   Tags                                        Description
+
+<label>                            tag defines a label for many form elements element is useful for screen-reader users, because the screen-reader will read out loud the label when the user focus on the input element.
+<select>                           element defines a drop-down list
+<textarea>                         element defines a multi-line input field (a text area)
+<button>                           element defines a clickable button
+<fieldset>                         element is used to group related data in a form
+<legend>                           element defines a caption for the <fieldset> element
+<datalist>                         element specifies a list of pre-defined options for an <input> element Users will see a drop-down list of the pre-defined options as they input data 
+<output>                           element represents the result of a calculation (like one performed by a script)
+<option>                           Defines an option in a drop-down list
+<optgroup>                         Defines a group of related options in a drop-down list
+
+INPUT ATTRIBUTIES:
+value Attribute: attribute specifies an initial value for an input field
+Example:
+<input type="text" id="fname" name="fname" value="John">
+
+Readonly Attribute: attribute specifies that an input field is read-only
+Example:
+  <input type="text" id="fname" name="fname" value="John" readonly>
+
+Disable Attribute: attribute specifies that an input field should be disabled. A disabled input field is unusable and un-clickable
+Example:
+input type="text" id="fname" name="fname" value="John" disabled>
+
+Size Attribute: attribute specifies the visible width, in characters, of an input field.  The default value for size is 20
+
+ Example:    <input type="text" id="fname" name="fname" size="50">
+
+ Maxlength Attribute: attribute specifies the maximum number of characters allowed in an input field.
+
+ Example:   <input type="text" id="fname" name="fname" size="50">
+
+ Min and Max Attribute: The input min and max attributes specify the minimum and maximum values for an input field
+ The min and max attributes work with the following input types: number, range, date, datetime-local, month, time and week.
+
+Example: <label for="datemax">Enter a date before 1980-01-01:</label>
+  <input type="date" id="datemax" name="datemax" max="1979-12-31">
+
+  <label for="datemin">Enter a date after 2000-01-01:</label>
+  <input type="date" id="datemin" name="datemin" min="2000-01-02">
+
+  <label for="quantity">Quantity (between 1 and 5):</label>
+  <input type="number" id="quantity" name="quantity" min="1" max="5">
+
+ Multiple Attribute: attribute specifies that the user is allowed to enter more than one value in an input field. The multiple attribute works with the following input types: email, and file
+
+ Example:   <input type="file" id="files" name="files" multiple>
+
+ Pattern Attribute: attribute specifies a regular expression that the input field's value is checked against, when the form is submitted. attribute works with the following input types: text, date, search, url, tel, email, and password
+
+ Example:    <input type="text" id="country_code" name="country_code"
+  pattern="[A-Za-z]{3}" title="Three letter country code">
+
+  Placeholder: attribute specifies a short hint that describes the expected value of an input field (a sample value or a short description of the expected format).
+      ----->  The short hint is displayed in the input field before the user enters a value.
+      -----> attribute works with the following input types: text, search, url, tel, email, and password
+Required Attributes: attribute specifies that an input field must be filled out before submitting the form.
+     ------> attribute works with the following input types: text, search, url, tel, email, password, date pickers, number, checkbox, radio, and file
+
+     Example:   <input type="text" id="username" name="username" required>
+ 
+ Step Attribute: attribute specifies the legal number intervals for an input field
+     ------> Example: if step="3", legal numbers could be -3, 0, 3, 6, etc.
+    ------> attribute works with the following input types: number, range, date, datetime-local, month, time and week.
+
+   Example:   <input type="number" id="points" name="points" step="3">
+
+ Autofocus Attribute: attribute specifies that an input field should automatically get focus when the page loads
+
+ Example:   <input type="text" id="fname" name="fname" autofocus>
+
+Height and Width Attribute: attributes specify the height and width of an <input type="image"> element.
+
+Example:   <input type="text" id="lname" name="lname"><br><br>
+  <input type="image" src="img_submit.gif" alt="Submit" width="48" height="48">
+
+ List Attribute:  The input list attribute refers to a <datalist> element that contains pre-defined options for an <input> element.
+
+Autocomplete Attribute: The input autocomplete attribute specifies whether a form or an input field should have autocomplete on or off.
+
+-------------> Autocomplete allows the browser to predict the value. When a user starts to type in a field, the browser should display options to fill in the field, based on earlier typed values.
+------------> The autocomplete attribute works with <form> and the following <input> types: text, search, url, tel, email, password, datepickers, range, and color.
+
+
+HTML5 Document
+The following tags have been introduced for better structure −
+
+•	section − This tag represents a generic document or application section. It can be used together with h1-h6 to indicate the document structure.
+•	article − This tag represents an independent piece of content of a document, such as a blog entry or newspaper article.
+•	aside − This tag represents a piece of content that is only slightly related to the rest of the page.
+•	header − This tag represents the header of a section.
+•	footer − This tag represents a footer for a section and can contain information about the author, copyright information, et cetera.
+•	nav − This tag represents a section of the document intended for navigation.
+•	dialog − This tag can be used to mark up a conversation.
+•	figure − This tag can be used to associate a caption together with some embedded content, such as a graphic or video.
+
+
+
+

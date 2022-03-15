@@ -1,0 +1,465 @@
+Css-Cascading style sheet
+      |
+Cascading Style Sheets (CSS) is used to format the layout of a webpage.
+     |
+It control the color, font, the size of text, the spacing between elements, how elements are positioned and laid out, what background images or background colors are to be used, different displays for different devices and screen sizes, and much more!
+
+css which help the developer to apply style to html elements within the web page
+
+history of css:
+
+1.0
+2.0
+3.0---latest version of css
+
+comments
+/* */
+
+How yo apply style:
+
+CSS can be added to HTML documents in 3 ways:
+
+-->Inline - by using the style attribute inside HTML elements---> styling done within the element code
+-->Internal - by using a <style> element in the <head> section
+-->External - by using a <link> element to link to an external CSS file
+
+-------><link rel="stylesheet" type="text/css" href=" ">
+
+--****CSS Syntax:
+
+           declaration            declaration
+               |                     |
+--> h1     {color: blue;       font-size:12px; }
+    |          |     |          |          |
+selectors      property    value     property value    
+
+    
+----> The selector points to the HTML element you want to style.(it help the developer to select particular element to apply style)
+
+--->The declaration block contains one or more declarations separated by semicolons.
+
+---->Each declaration includes a CSS property name and a value, separated by a colon.(apply properties to the element)
+
+----->Multiple CSS declarations are separated with semicolons, and declaration blocks are surrounded by curly braces.
+
+
+style---attributes
+
+= --- assigment operator
+
+color ---property
+
+:--- separator
+
+blue ---value of the property
+
+;---- terminator
+
+
+when we have changes to the styling--->difficut to update styling in inline class
+
+Design Principal:
+
+separation of concern
+
+since HTML and CSS are written together, it creates lots of confusion
+
+REAL TIME:
+
+lots of  elements in the web page
+
+No code redundancy
+clear code organisation
+
+
+INTERNAL CSS:
+
+within <head> tag ---> styling of elements
+<style></style>
+
+Draw back of internal css:
+
+if the other forms in the application also need same classes for styling ----> external css is important
+
+                             All CSS Simple Selectors
+
+
+Selector	Example	      Example description
+
+#id	------>#firstname	-----Selects the element with id="firstname"
+.class---->	.intro	---Selects all elements with class="intro"
+element.class------->	----p.intro	Selects only <p> elements with class="intro"
+*----------------->	* ---	Selects all elements
+element--------->	p----	Selects all <p> elements
+element,element,..--------->	div, p	Selects all <div> elements and all <p> elements
+
+CSS SELECTORS:
+
+
+Simple selectors (select elements based on name, id, class)
+
+-----> <p> elements on the page will be center-aligned, with a red text color: 
+---->eXAMPLE: p {
+  text-align: center;
+  color: red;
+}
+
+Combinator selectors: (select elements based on a specific relationship between them)
+
+-----> A CSS selector can contain more than one simple selector. Between the simple selectors, we can include a combinator.
+
+There are four different combinators in CSS:
+
+-----descendant selector (space)
+EXAMPLE: The descendant selector matches all elements that are descendants of a specified element.
+
+        div p {
+              background-color: yellow;
+             }
+
+----child selector (>)
+EXAMPLE: The child selector selects all elements that are the children of a specified element.
+
+       div > p {
+                 background-color: yellow;
+       }
+
+----adjacent sibling selector (+)
+EXAMPLE: The adjacent sibling selector is used to select an element that is directly after another specific element.
+         Sibling elements must have the same parent element, and "adjacent" means "immediately following".
+     
+     div + p {
+            background-color: yellow;
+            }
+
+
+-----general sibling selector (~)
+EXAMPLE: The general sibling selector selects all elements that are next siblings of a specified element.
+      div ~ p {
+            background-color: yellow;
+              }
+
+
+Pseudo-class selectors (select elements based on a certain state)
+
+A pseudo-class is used to define a special state of an element.
+
+For example, it can be used to:
+
+----Style an element when a user mouses over it
+----Style visited and unvisited links differently
+----Style an element when it gets focus
+EXAMPLE: selector:pseudo-class {
+                         property: value;
+                           }
+
+
+
+Pseudo-elements selectors (select and style a part of an element)
+Attribute selectors (select elements based on an attribute or attribute value)
+
+
+
+
+                                      CSS BORDERS  
+----I have borders on all sides.
+
+
+---I have a red bottom border.
+
+
+---I have rounded borders.
+
+
+---I have a blue left border.
+
+
+                                    CSS BORDERS Style
+---> The border-style property specifies what kind of border to display.
+
+                        The following values are allowed:
+
+--dotted - Defines a dotted border
+--dashed - Defines a dashed border
+--solid - Defines a solid border
+--double - Defines a double border
+--groove - Defines a 3D grooved border. The effect depends on the border-color value
+--ridge - Defines a 3D ridged border. The effect depends on the border-color value
+--inset - Defines a 3D inset border. The effect depends on the border-color value
+--outset - Defines a 3D outset border. The effect depends on the border-color value
+--none - Defines no border
+-hidden - Defines a hidden border
+
+The border-style property can have from one to four values (for the top border, right border, bottom border, and the left border)
+
+
+EXAMPLES:   p.dotted {border-style: dotted;}(FOR ALL THE  STYES WE CAN WRITE LIKE THIS)
+
+                                    CSS Border Width
+-------->The border-width property specifies the width of the four borders.
+----->width can be set as a specific size (in px, pt, cm, em, etc) or by using one of the three pre-defined values: thin, medium, or thick:
+
+EXAMPLE:   p.one {          
+              border-style: solid;
+              border-width: 5px;
+                }
+ --->  p.two {
+            border-style: solid;
+          border-width: medium;
+            }
+
+
+---->p.three {
+           border-style: dotted;
+             border-width: 2px;
+            }
+--->p.four {
+         border-style: dotted;
+         border-width: thick;
+            }
+                                
+
+                                Specific Side Widths
+------->The border-width property can have from one to four values (for the top border, right border, bottom border, and the left border):
+
+EXAMPLES:        p.one {
+             border-style: solid;
+             border-width: 5px 20px; /* 5px top and bottom, 20px on the sides */
+                    }
+
+---->p.two {
+            border-style: solid;
+            border-width: 20px 5px; /* 20px top and bottom, 5px on the sides */
+           }
+
+----> p.three {
+       border-style: solid;
+       border-width: 25px 10px 4px 35px; /* 25px top, 10px right, 4px bottom and 35px left */
+              }
+
+
+                  
+                  
+                  --------- CSS Border Color-------------
+
+
+
+
+----->Border-color property is used to set the color of the four borders.
+
+--name - specify a color name, like "red"
+
+---HEX - specify a HEX value, like "#ff0000"
+--RGB - specify a RGB value, like "rgb(255,0,0)"
+--HSL - specify a HSL value, like "hsl(0, 100%, 50%)"
+--transparent
+
+
+Note: If border-color is not set, it inherits the color of the element.
+
+EXAMPLE:  p.one {
+              border-style: solid;
+            border-color: red;
+                }
+                                   Specific Side Colors
+
+------>The border-color property can have from one to four values (for the top border, right border, bottom border, and the left border). 
+
+EXAMPLE: p.one {
+              border-style: solid;
+              border-color: red green blue yellow; /* red top, green right, blue bottom and yellow left */
+            }
+
+                                     HEX Values
+ 
+ ----->The color of the border can also be specified using a hexadecimal value (HEX):
+
+ EXAMPLE: p.one {
+               border-style: solid;
+            border-color: #ff0000; /* red */
+                }
+                         
+
+
+                         RGB Values
+--->Using rgb values (it slike colors)
+example:    p.one {
+               border-style: solid;
+               border-color: rgb(255, 0, 0); /* red */
+                  }
+                    
+
+                    HSL Values
+
+exmples:  p.one {
+          border-style: solid;
+          border-color: hsl(0, 100%, 50%); /* red */
+                 }
+
+
+
+                 ---------CSS Border Sides-----
+
+CSS Border - Individual Sides
+
+-----In CSS, there are also properties for specifying each of the borders (top, right, bottom, and left):
+
+example:       p {
+                 border-top-style: dotted;
+                 border-right-style: solid;
+                 border-bottom-style: dotted;
+                 border-left-style: solid;
+                  }
+
+
+-------If the border-style property has four values:
+
+       border-style: dotted solid double dashed;
+          --  top border is dotted
+          --right border is solid
+          ---bottom border is double
+          ---left border is dashed
+          ---If the border-style property has three values:
+
+      border-style: dotted solid double;
+               ----top border is dotted
+               ----right and left borders are solid
+               ----bottom border is double
+               ----If the border-style property has two values:
+
+      border-style: dotted solid;
+                -----top and bottom borders are dotted
+                -----right and left borders are solid
+                -----If the border-style property has one value:
+
+      border-style: dotted;
+               -----all four borders are dotted
+
+
+examples:  /* Four values */
+p {
+  border-style: dotted solid double dashed;
+}
+
+/* Three values */
+p {
+  border-style: dotted solid double;
+}
+
+/* Two values */
+p {
+  border-style: dotted solid;
+}
+
+/* One value */
+p {
+  border-style: dotted;
+}
+
+
+                        --------CSS Shorthand Border Property---------
+
+
+              CSS Border - Shorthand Property
+-----There are many properties to consider when dealing with borders.
+
+-----To shorten the code, it is also possible to specify all the individual border properties in one property.
+
+----The border property is a shorthand property for the following individual border properties:
+
+1)border-width
+2)border-style (required)
+3)border-color
+    EXAMPLE:   p {
+              border: 5px solid red;
+                 }
+      IN THIS WE WILL GET BORDER RED OF FOUR SIDES
+
+EXAMPLE: Left p {
+                border-left: 6px solid red;
+               Border
+               }
+      IN THIS WE WILL GET THE BORDER OF LEFT SIDE
+
+EXAMPLES:   Bottom Border
+                p {
+                  border-bottom: 6px solid red;
+                }
+      
+                         
+
+
+            ---------CSS Rounded Borders-----------
+      
+ -----border-radius property is used to add rounded borders to an element
+  EXAMPLE:  p {
+              border: 2px solid red;
+              border-radius: 5px;
+              }
+                  
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                       ---------CSS Box Model------------
+  ---> "box model" is used when talking about design and layout. 
+  --->The CSS box model is essentially a box that wraps around every HTML element
+  --->It consists of: margins, borders, padding, and the actual content
+                                               
+
+
+      content--padding--border--margin
+--->Content - The content of the box, where text and images appear
+--->Padding - Clears an area around the content. The padding is transparent
+--->Border - A border that goes around the padding and content
+--->Margin - Clears an area outside the border. The margin is transparent
+
+
+EXAMPLE:  div {
+  width: 300px;
+  border: 15px solid green;
+  padding: 50px;
+  margin: 20px;
+}
+
+
+                      Width and Height of an Element
+
+Important: When you set the width and height properties of an element with CSS, you just set the width and height of the content area. To calculate the full size of an element, you must also add padding, borders and margins.
+
+
+Here is the calculation:
+320px (width)
++ 20px (left + right padding)
++ 10px (left + right border)
++ 0px (left + right margin)
+= 350px
+The total width of an element should be calculated like this:
+
+Total element width = width + left padding + right padding + left border + right border + left margin + right margin
+
+The total height of an element should be calculated like this:
+
+Total element height = height + top padding + bottom padding + top border + bottom border + top margin + bottom margin
+
