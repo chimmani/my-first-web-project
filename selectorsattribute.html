@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: auto;
+            height: auto;
+            background: rgb(136, 205, 223);
+            display: flex;
+        }
+        .container1{
+            width: auto;
+            height: auto;
+            background: rgb(136, 205, 223);
+            display: flex;
+        }
+        .box1{
+            margin: 50px;
+            padding: 50px; 
+            background-color: blueviolet; 
+            border: 5px solid greenyellow;
+            border-radius: 50px;
+        }
+        [class*="lor"]{/*[attribute*="value"] Attribute value contains*/
+            margin: 80px;
+            padding: 50px; 
+            background-color: green;
+            border: 5px dotted red;
+            margin: 70px;
+        
+        }
+        [class^="top"]{/*[attribute^="value"] attribute value starts with*/
+            margin: 80px;
+            box-sizing: border-box;
+            padding: 50px; 
+            background-color: red;
+            border: 8px double white;
+        }
+        [class$="een"]{/*[attribute$="value"] attribute value ends with*/
+            margin: 80px;
+            box-sizing: border-box;
+            padding: 50px; 
+            background-color: blue;
+            border: 8px outset white;
+        }
+        [class^="red"]{/*[attribute^="value"] attribute value starts with*/
+            margin: 80px;
+            box-sizing: border-box;
+            padding: 50px; 
+            background-color: black;
+            border: 8px groove gold;
+        }
+        [class|="blue"]{
+            margin: 80px;
+            box-sizing: border-box;
+            padding: 50px; 
+            background-color: white;
+            border: 8px inset grey;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box1">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGSlYYjFh7wSdKdH-Ly1phuIcqIP9LCbCJIA&usqp=CAU" title="flower" > 
+        </div>
+        <div class="bgcolor">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGSlYYjFh7wSdKdH-Ly1phuIcqIP9LCbCJIA&usqp=CAU" title="images of flowers"> 
+        </div>
+        <div class="top abc">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQh9T_POooPy5XbXLtZRL8VpPGboVZwL3sT9w&usqp=CAU" target="_blank">
+        </div>
+    </div>
+    <div class="container1">
+        <div class="green">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQh9T_POooPy5XbXLtZRL8VpPGboVZwL3sT9w&usqp=CAU">
+        </div>
+        <div class="red">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTq7ZEfUua0KAX_mVHYtk3MLD-GV2pz6BL5c6ONlkjnkcMZTHmIjeBBdpYErqpDxMFapHc&usqp=CAU">
+        </div>
+        <div class="blue">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGSlYYjFh7wSdKdH-Ly1phuIcqIP9LCbCJIA&usqp=CAU">
+        </div>
+    </div>
+</body>
+</html>

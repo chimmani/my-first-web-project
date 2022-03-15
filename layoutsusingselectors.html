@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .A{
+            border:1px solid red;
+        }
+        .B{
+            border-bottom: 1px solid red;height: 80px;display: flex ;
+        }
+        .C{
+            border-top: 1px solid red;height: 80; 
+        }
+        .firstblock{
+            flex: 1;
+            border-left: 1px;
+            border-right: 1px solid red; height: 300px;
+        }
+        [href]{
+            color: lightpink;
+        }
+        img[title]{                             /* Element with specific attribute*/
+            border: 3px solid blueviolet;
+        }
+        input[type]{
+            border: 3px solid blue;
+        }
+        [class^="color"]{/* attribut starts with*/
+            background: rgb(35, 104, 21);
+        }
+        [class^="red"]{
+            text-align: justify;
+        }
+        [class$="blue"]{        /*attribute ends with*/
+            background: yellow;
+        }
+        img[alt$="flower"]{
+            border: 3px solid lightgreen;
+        }
+        [class*="bgcolor"]{     /*it contains a specific value*/
+            background: brown;
+        }
+        img[alt~="gouache"]{    /* value matches attribute in space separated in list*/
+            border: 3px solid rgb(175, 72, 136);
+          
+        }
+        h2{
+            background: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="A">
+        <div class="B">
+            <div>
+                <img src="https://yt3.ggpht.com/YX4gFeRgvr_Y5KEv-iZLsPa31iQnejvkOnLTlr93a_Ssimao9zSHcq0yNoI4XWN7O3N_GX58=s176-c-k-c0x00ffffff-no-rj" height="80" width="150">
+            </div>
+            <div style="flex:3;">
+                <ul type="none" style="display: flex;">
+                    <li style="flex: 1;">
+                       <a href="https://www.pinterest.com/sushma013/" target="_blank"> HOME</a>
+                    </li>
+                    <li style="flex: 1;">
+                       <a href="https://www.pinterest.com/sushma013/" target="_blank">PURCHASE</a>
+                    </li>
+                    <li style="flex: 1;">
+                       <a href="https://www.pinterest.com/sushma013/" target="_blank">VISIT</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div style="display: flex;">
+            <div class="firstblock">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSX98mzHk3CBWWJi8LPlS2yXFzHZuZzytL4AA&usqp=CAU" height="300" width="480" alt="image of flower">
+            </div>
+            <div class="firstblock">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGSlYYjFh7wSdKdH-Ly1phuIcqIP9LCbCJIA&usqp=CAU" title="floral flower" height="300" width="490">
+            </div>
+            <div class="firstblock">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQh9T_POooPy5XbXLtZRL8VpPGboVZwL3sT9w&usqp=CAU" height="300" width="480"alt="painting of gouache">
+            </div>
+        </div>
+        <div class="C">
+            <ul type="none" style="display: flex;">
+                <li style="flex: 1;">
+                    <a href="https://www.pinterest.com/sushma013/" target="_blank">PINTEREST</a>
+                </li>
+                <li style="flex: 1;">
+                    <a href="https://www.youtube.com/channel/UCyBxljOz2Dpq9Nf6LjSzR5w" target="_blank">YOUTUBE</a>
+                </li>
+                <li style="flex: 1;">
+                    <a href="https://www.facebook.com/sushma.chimmani.3" target="_blank">FACEBOOK</a>
+                </li>
+            </ul>
+        </div>
+    </div><br><br>
+    <h2>Attributes selectors</h2>
+    <div class="red">selector is used to select elements with the specified attribute, whose value starts with the specified value.</div><br>
+    <div class="blue">selector is used to select elements whose attribute value ends with a specified value.</div><br>
+    <div class="bgcolor">selector is used to select elements whose attribute value contains a specified value.</div><br>
+    <label for="fname">Firstname</label>
+    <input type="text" id="fname" name="fname"><br><br>
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lname"><br><br>
+    <h1 class="color-a">This is CSS Attribute Selectors</h1>
+    <p class="colora">HTML is the standard markup language for Web pages.</p>
+</body>
+</html>
