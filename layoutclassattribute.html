@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model Properties</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: rgb(157, 179, 209);
+        }
+        .container{
+            background-color: rgb(79, 202, 216);
+            border: 3px dotted red;
+            padding: 34px 19px;  
+            margin: 34px 14px;
+            border-radius: 23px;
+            width: 533px;
+        }
+        .main{ 
+            border: 3px solid red;
+            padding: 34px 19px; 
+            margin: 80px 14px;
+            border-radius: 23px;
+            width: 1560px;
+            display: flex;
+            
+        }
+        [class*="ner"]{
+            border: 2px dotted green;
+        }
+        [class^="sec"]{
+            border: 2px solid blue;
+        }
+        [class$="id4"]{
+            border: 6px double goldenrod;
+        }
+        [class|="fistid5"]{
+            border: 6px outset greenyellow;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="container">
+            <h3>Box Model</h3>
+            <p class="firstid1">In web development, the CSS box model refers to how HTML elements are modeled in browser engines and how the dimensions of those HTML elements are derived from CSS properties. It is a fundamental concept for the composition of HTML webpages.</p>
+        </div>
+        <div class="container">
+            <h3>Box Model</h3>
+            <p class="secondid">In web development, the CSS box model refers to how HTML elements are modeled in browser engines and how the dimensions of those HTML elements are derived from CSS properties. It is a fundamental concept for the composition of HTML webpages.</p>
+        </div>
+            <div class="container">
+            <h3>Box Model</h3>
+            <p class="fistid3">In web development, the CSS box model refers to how HTML elements are modeled in browser engines and how the dimensions of those HTML elements are derived from CSS properties. It is a fundamental concept for the composition of HTML webpages.</p>
+        </div>
+         <div class="container">
+            <h3>Box Model</h3>
+            <p class="fistid4">In web development, the CSS box model refers to how HTML elements are modeled in browser engines and how the dimensions of those HTML elements are derived from CSS properties. It is a fundamental concept for the composition of HTML webpages.</p>
+         </div>
+        <div class="container">
+            <h3>Box Model</h3>
+            <p class="fistid5">In web development, the CSS box model refers to how HTML elements are modeled in browser engines and how the dimensions of those HTML elements are derived from CSS properties. It is a fundamental concept for the composition of HTML webpages.<p>
+     </div>
+</div>
+</body>
+</html>

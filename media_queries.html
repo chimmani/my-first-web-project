@@ -1,0 +1,77 @@
+<!--
+    media quries in css
+
+    responsive web design
+
+    to implement RWD--conditional css--- media quries
+
+    ----resolution (lenght screen width)
+
+    ----orientation --landscape/potrait
+
+    in webdeveloper tool, use toggle device toolbar to see the application on different devices
+    
+    use flexbox/grid for your layouts--media 
+
+    for my media queries to work in the code, head of the html should have the meta tag
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+        }
+        .container figure{
+            margin: 0 10px;
+            flex: 1;
+            border: 1px solid red;
+            padding: 10px;
+            border-radius: 10px;
+            height: 10%;
+        }
+        @media screen and (max-width:768px){
+            .container{
+                flex-direction: column;
+            } 
+        }
+    </style>
+</head>
+<body>
+
+    <section class="container">
+        <figure class="rose">
+            <img src="../dailyclasses.html/images/pics/landscape.jpg" alt="image 1"/>
+            <figcaption>figure 1</figcaption>
+        </figure>
+        <figure class="daisy">
+            <img src="../dailyclasses.html/images/pics/landscape.jpg" alt="image 2"/>
+            <figcaption>figure 2</figcaption>
+        </figure>
+        <figure class="blue">
+            <img src="../dailyclasses.html/images/pics/landscape.jpg" alt="image 3"/>
+            <figcaption>figure 3</figcaption>
+        </figure>
+        <figure class="green">
+            <img src="../dailyclasses.html/images/pics/landscape.jpg" alt="image 4"/>
+            <figcaption>figure 4</figcaption>
+        </figure>
+        <figure class="white">
+            <img src="../dailyclasses.html/images/pics/landscape.jpg" alt="image 5"/>
+            <figcaption>figure 5</figcaption>
+        </figure>
+    </section>
+</body>
+</html>
+
+
+
